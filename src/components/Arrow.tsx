@@ -1,11 +1,12 @@
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import ArrowSVG from "./ArrowSVG";
 
 function Arrow() {
   gsap.registerPlugin(useGSAP);
 
-  const arrow = useRef<HTMLDivElement>(null);
+  const arrow = useRef<SVGSVGElement>(null);
   let [box_x, box_y] = [0,0];
   
 
@@ -23,7 +24,7 @@ function Arrow() {
 
     const angle = 90 - (360 * Math.atan2(deltaY, deltaX)) / (2 * Math.PI);
 
-    // console.log(angle);
+    console.log(angle);
 
     gsap.to(arrow.current, {
       rotation: angle + "_short",
@@ -50,7 +51,8 @@ function Arrow() {
     };
   }, []);
 
-  return <div ref={arrow} className="box"></div>;
+  // return <div ref={arrow} className="box"></div>;
+  return <ArrowSVG ref={arrow}/>
 }
 
 export default Arrow;
