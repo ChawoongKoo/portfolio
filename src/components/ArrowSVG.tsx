@@ -1,6 +1,6 @@
 import { forwardRef, type ForwardedRef } from "react";
 
-function ArrowSVG(props: {}, ref: ForwardedRef<SVGSVGElement>) {
+function ArrowSVG(_props: {}, ref: ForwardedRef<SVGSVGElement>) {
   return (
     <svg ref={ref} width="50" height="50">
       <defs>
