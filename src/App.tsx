@@ -19,7 +19,7 @@ function App() {
 
 
     let cards = [];
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 100; i++) {
         cards.push(<Arrow key={i} mouseX={mousePos[0]} mouseY={mousePos[1]}/>);
     }
     return (
